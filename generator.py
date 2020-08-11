@@ -1,13 +1,14 @@
 import random
 # open dictionary (370104 lines) (9 in fox)
-raw = open('fox.txt') # will replace with 'words_alpha'
-for data in raw:
-    data = data.lower()
-    data = data.split()
+raw = open('words_alpha.txt') # will replace with 'words_alpha'
 
-cdata = data
+data = raw.read()
+population = []
+for word in data.split():
+    word = word.lower()
+    population.append(word)
 
-words = random.sample(cdata, k=3)
+words = random.sample(population, k=3)
 num1 = random.randint(0, 1000)
 num1 = str(num1)
 
